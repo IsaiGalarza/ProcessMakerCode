@@ -19,6 +19,7 @@
 
     </head>
     <body class="{{ $class ?? '' }}">
+
         @auth()
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
@@ -148,7 +149,10 @@
         <script src="{{ asset('js/material-dashboard.js?v=2.1.1') }}" type="text/javascript"></script>
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
         
+       
         <script src="{{ asset('js/settings.js') }}"></script>
+       
         @stack('js')
+
     </body>
 </html>

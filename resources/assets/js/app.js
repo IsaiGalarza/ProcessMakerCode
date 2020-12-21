@@ -2,6 +2,8 @@
 
 window.Vue = require("vue");
 
+window.axios = require("axios");
+
 //Import Vue Filter
 require("./filter");
 
@@ -46,9 +48,18 @@ const router = new VueRouter({
     mode: "hash"
 });
 
-//Vue.component("task", require("./components/admin/TaskComponent.vue").default);
+Vue.component(
+    "component-task",
+    require("./components/admin/TaskComponent.vue").default
+);
 
+/*
 const app = new Vue({
     el: "#app",
+    router
+});*/
+
+const app = new Vue({
+    el: "#appmain",
     router
 });

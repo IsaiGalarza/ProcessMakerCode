@@ -5,8 +5,8 @@
       Tip 2: you can also add an image using data-image tag
   -->
   <div class="logo">
-    <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('Creative Tim') }}
+    <a href="/home" class="simple-text logo-normal">
+      {{ __('PROCESS MAKER') }}
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -17,6 +17,7 @@
             <p>{{ __('Dashboard') }}</p>
         </a>
       </li>
+      <!-- 
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
           <i><img style="width:25px" src="{{ asset('img/laravel.svg') }}"></i>
@@ -41,12 +42,23 @@
           </ul>
         </div>
       </li>
+      -->
+
+      <li class="nav-item{{ $activePage == 'task' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('task') }}">
+          <i class="material-icons">assignment</i>
+            <p>{{ __('Task List') }}</p>
+        </a>
+      </li>
+      
+      <!-- 
       <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
         <a class="nav-link" href="#">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Table List') }}</p>
         </a>
       </li>
+      
       <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">
         <a class="nav-link" href="#">
           <i class="material-icons">library_books</i>
@@ -77,7 +89,9 @@
           <p>{{ __('RTL Support') }}</p>
         </a>
       </li>
-      
+      -->
+
+
     </ul>
   </div>
 </div>
